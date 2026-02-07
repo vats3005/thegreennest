@@ -1,0 +1,131 @@
+.pageWrapper {
+    padding-bottom: 80px;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.introSection {
+    padding: 100px 0 80px 0;
+    text-align: center;
+    /* Keeping it centered for text-only focus as per "no image" request */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mainTitle {
+    font-family: var(--font-playfair);
+    font-size: 4rem;
+    /* Larger, more premium */
+    color: #1a3c34;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.introText {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 40px;
+    font-family: var(--font-inter);
+}
+
+.ctaButton {
+    display: inline-block;
+    background-color: #88C057;
+    /* Primary Green */
+    color: white;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(136, 192, 87, 0.3);
+}
+
+.ctaButton:hover {
+    background-color: #76a94b;
+    transform: translateY(-2px);
+}
+
+/* ... Keeping existing styles for Common Causes section if needed or used later ... */
+
+.commonCauses {
+    padding: 100px 0;
+    background-color: #F1F8E9;
+    /* Explicit pastel green from image/theme */
+    margin-top: 0;
+    /* Remove margin to connect smoothly if needed */
+    border-radius: 0;
+    /* Full width sections usually don't have border radius unless it's a specific card design. Image suggests full section bg. */
+}
+
+.sectionTitle {
+    font-family: var(--font-playfair);
+    font-size: 3rem;
+    color: #1a3c34;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.causesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    /* More gap */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.causeCard {
+    background: white;
+    padding: 50px;
+    border-radius: 24px;
+    /* More rounded */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    /* Softer, deeper shadow */
+    border: none;
+    /* Cleaner look without border */
+    transition: transform 0.3s ease;
+}
+
+.causeCard:hover {
+    transform: translateY(-5px);
+}
+
+.causeCard h3 {
+    color: #88C057;
+    /* Light green headline */
+    margin-bottom: 25px;
+    font-family: var(--font-inter);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.causeCard ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.causeCard li {
+    margin-bottom: 15px;
+    color: #555;
+    font-family: var(--font-inter);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .causesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .mainTitle {
+        font-size: 3rem;
+    }
+}

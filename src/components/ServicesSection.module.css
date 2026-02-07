@@ -1,0 +1,103 @@
+.servicesSection {
+    padding: 80px 20px;
+    background-color: #fafafa;
+    /* Light gray/white background per image */
+    text-align: center;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 60px;
+}
+
+.title {
+    font-family: var(--font-playfair);
+    font-size: 3rem;
+    color: #1a3c34;
+    /* Dark Green */
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: left;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.iconWrapper {
+    margin-bottom: 20px;
+    color: #2e7d32;
+    /* Green icon color */
+    /* Ensure SVG inherits or uses this color */
+}
+
+.cardTitle {
+    font-family: var(--font-inter);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a3c34;
+    margin-bottom: 15px;
+}
+
+.cardDescription {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.viewAllButton {
+    display: inline-flex;
+    align-items: center;
+    background-color: #88C057;
+    /* Light Green */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.viewAllButton:hover {
+    background-color: #76a94b;
+}
+
+.arrowIcon {
+    margin-left: 8px;
+}
+
+@media (max-width: 900px) {
+    .cardsGrid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

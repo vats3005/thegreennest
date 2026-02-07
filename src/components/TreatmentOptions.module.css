@@ -1,0 +1,67 @@
+.section {
+    padding: 80px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.title {
+    font-family: var(--font-playfair);
+    font-size: 3rem;
+    color: #1a3c34;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Hover effect as per usual premium feel */
+    border-color: var(--primary-green);
+    transform: translateY(-5px);
+}
+
+.cardTitle {
+    font-family: var(--font-inter);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a3c34;
+    margin-bottom: 12px;
+}
+
+.cardDescription {
+    font-family: var(--font-inter);
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
