@@ -18,6 +18,9 @@ const playfair = Playfair_Display({
 export const metadata = {
   title: "The Green Nest | Infertility Clinic",
   description: "Centre for Women - Headed by Dr. Shilpi Srivastava",
+  verification: {
+    google: "bevheu_QxCwDxsHnNXsvUfp7KkkCa1MbWQ3PxyA6TR8",
+  },
 };
 
 export default function RootLayout({ children }) {
