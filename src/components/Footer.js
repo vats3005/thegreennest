@@ -27,7 +27,7 @@ export default function Footer() {
                     <p>SCO 49, Phase 6, Mohali</p>
                     <p>Punjab, India</p>
                     <p>Phone: +91 7888368297</p>
-                    <p>Email: info@thegreennest.com</p>
+                    <p>Email: thegreennest6@gmail.com</p>
                 </div>
             </div>
 
