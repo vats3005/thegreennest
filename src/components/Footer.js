@@ -24,9 +24,9 @@ export default function Footer() {
 
                 <div className={styles.column}>
                     <h3>Contact Us</h3>
-                    <p>123 Green Avenue, Health District</p>
-                    <p>New Delhi, India</p>
-                    <p>Phone: +91 98765 43210</p>
+                    <p>SCO 49, Phase 6, Mohali</p>
+                    <p>Punjab, India</p>
+                    <p>Phone: +91 7888368297</p>
                     <p>Email: info@thegreennest.com</p>
                 </div>
             </div>
