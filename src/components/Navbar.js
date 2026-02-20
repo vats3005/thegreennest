@@ -43,6 +43,7 @@ export default function Navbar() {
         { name: "Meet Dr. Shilpi", href: "/meet-dr-shilpi" },
         { name: "Infertility", href: "/infertility" },
         { name: "Services", href: "/services" },
+        { name: "Blogs", href: "/blogs" },
         { name: "Contact", href: "/contact" },
     ];
 

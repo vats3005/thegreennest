@@ -18,6 +18,7 @@ export default function Footer() {
                         <li><Link href="/meet-dr-shilpi">Meet Dr. Shilpi</Link></li>
                         <li><Link href="/infertility">Infertility</Link></li>
                         <li><Link href="/services">Services</Link></li>
+                        <li><Link href="/blogs">Blogs</Link></li>
                         <li><Link href="/contact">Contact</Link></li>
                     </ul>
                 </div>

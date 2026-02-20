@@ -1,0 +1,228 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 120px 20px 80px 20px;
+}
+
+/* ─── Back Link ─── */
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary-green);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    margin-bottom: 40px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.backLink:hover {
+    transform: translateX(-4px);
+    opacity: 0.8;
+}
+
+/* ─── Article ─── */
+.article {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 48px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eef4ee;
+}
+
+/* ─── Article Header ─── */
+.articleHeader {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #f0f4f0;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+}
+
+.category {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    color: var(--secondary-green);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dot {
+    color: #bbb;
+}
+
+.readTime {
+    color: #888;
+    font-weight: 500;
+}
+
+.title {
+    font-family: var(--font-playfair);
+    font-size: 2.8rem;
+    color: var(--dark-text);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.authorRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.author {
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+.date {
+    color: #999;
+}
+
+/* ─── Article Content (markdown HTML) ─── */
+.content {
+    font-family: var(--font-inter);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.content h2 {
+    font-family: var(--font-playfair);
+    font-size: 1.8rem;
+    color: var(--dark-text);
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.content h3 {
+    font-family: var(--font-playfair);
+    font-size: 1.4rem;
+    color: var(--dark-text);
+    margin-top: 32px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+.content ul,
+.content ol {
+    margin-bottom: 20px;
+    padding-left: 24px;
+}
+
+.content li {
+    margin-bottom: 8px;
+}
+
+.content strong {
+    color: var(--dark-text);
+    font-weight: 600;
+}
+
+.content a {
+    color: var(--primary-green);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.content a:hover {
+    color: var(--secondary-green);
+}
+
+.content blockquote {
+    border-left: 4px solid var(--primary-green);
+    background: #f9fdf9;
+    margin: 28px 0;
+    padding: 20px 24px;
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+    color: #555;
+}
+
+.content blockquote p {
+    margin-bottom: 0;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 24px 0;
+}
+
+/* ─── Bottom CTA ─── */
+.cta {
+    text-align: center;
+    margin-top: 60px;
+    padding: 48px 32px;
+    background: linear-gradient(135deg, #f0f9f0, #e8f5e9);
+    border-radius: 20px;
+    border: 1px solid #d4ecd4;
+}
+
+.ctaText {
+    font-family: var(--font-playfair);
+    font-size: 1.4rem;
+    color: var(--dark-text);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.ctaButton {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: var(--primary-green);
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(136, 192, 87, 0.3);
+}
+
+.ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(136, 192, 87, 0.4);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 600px) {
+    .article {
+        padding: 28px 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content h3 {
+        font-size: 1.2rem;
+    }
+
+    .authorRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
