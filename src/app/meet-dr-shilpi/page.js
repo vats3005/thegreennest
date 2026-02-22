@@ -1,14 +1,106 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+const SITE_URL = "https://thegreennest.vercel.app";
+
+export const metadata = {
+    title: "Dr. Shilpi Srivastava – Fertility Specialist & Gynaecologist in Mohali",
+    description:
+        "Meet Dr. Shilpi Srivastava, a leading fertility specialist and gynaecologist with 24+ years of experience at The Green Nest, Mohali. MBBS, DGO, Fellowship in Reproductive Medicine.",
+    alternates: {
+        canonical: `${SITE_URL}/meet-dr-shilpi`,
+    },
+    openGraph: {
+        title: "Dr. Shilpi Srivastava – Fertility Specialist & Gynaecologist in Mohali",
+        description:
+            "Meet Dr. Shilpi Srivastava, a leading fertility specialist with 24+ years of experience. MBBS, DGO, Fellowship in Reproductive Medicine at The Green Nest, Mohali.",
+        url: `${SITE_URL}/meet-dr-shilpi`,
+        images: [
+            {
+                url: "/dr-shilpi.jpg",
+                width: 500,
+                height: 600,
+                alt: "Dr. Shilpi Srivastava – Fertility Specialist at The Green Nest",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Dr. Shilpi Srivastava – Fertility Specialist in Mohali",
+        description:
+            "24+ years of experience in women's health and infertility treatment. MBBS, DGO, Fellowship in Reproductive Medicine.",
+        images: ["/dr-shilpi.jpg"],
+    },
+};
+
+const physicianJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    mainEntity: {
+        "@type": "Physician",
+        name: "Dr. Shilpi Srivastava",
+        image: `${SITE_URL}/dr-shilpi.jpg`,
+        url: `${SITE_URL}/meet-dr-shilpi`,
+        description:
+            "Dr. Shilpi Srivastava is a Fertility Specialist & Gynaecologist with over 24 years of clinical experience. She heads The Green Nest clinic in Mohali.",
+        medicalSpecialty: ["Obstetrics and Gynecology", "Reproductive Endocrinology"],
+        qualifications: "MBBS, DGO (Seth GS Medical College Mumbai), Fellowship in Reproductive Medicine (DY Patil University)",
+        hasCredential: [
+            {
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: "degree",
+                educationalLevel: "MBBS",
+                recognizedBy: { "@type": "Organization", name: "RNT Medical College, Udaipur" },
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: "diploma",
+                educationalLevel: "DGO",
+                recognizedBy: { "@type": "Organization", name: "Seth GS Medical College, Mumbai" },
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: "fellowship",
+                educationalLevel: "Fellowship in Reproductive Medicine",
+                recognizedBy: { "@type": "Organization", name: "DY Patil University, Navi Mumbai" },
+            },
+        ],
+        worksFor: {
+            "@type": "MedicalClinic",
+            name: "The Green Nest",
+            url: SITE_URL,
+        },
+        address: {
+            "@type": "PostalAddress",
+            streetAddress: "SCO 49, Phase 6",
+            addressLocality: "Mohali",
+            addressRegion: "Punjab",
+            addressCountry: "IN",
+        },
+        telephone: "+917888368297",
+        availableService: [
+            { "@type": "MedicalTherapy", name: "IVF (In Vitro Fertilization)" },
+            { "@type": "MedicalTherapy", name: "ICSI" },
+            { "@type": "MedicalTherapy", name: "IUI (Intrauterine Insemination)" },
+            { "@type": "MedicalProcedure", name: "Infertility Counseling" },
+            { "@type": "MedicalProcedure", name: "General Gynecology" },
+            { "@type": "MedicalProcedure", name: "Pregnancy Care" },
+        ],
+    },
+};
+
 export default function MeetDrShilpi() {
     return (
         <div className={styles.container}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJsonLd) }}
+            />
             <section className={styles.profileSection}>
                 <div className={styles.imageWrapper}>
                     <Image
-                        src="/dr-shilpi.jpg" // Ensure this file exists in public/
-                        alt="Dr. Shilpi Srivastava"
+                        src="/dr-shilpi.jpg"
+                        alt="Dr. Shilpi Srivastava – Fertility Specialist & Gynaecologist at The Green Nest, Mohali"
                         width={500}
                         height={600}
                         className={styles.profileImage}

@@ -2,6 +2,49 @@
 import { useState } from "react";
 import styles from "./page.module.css";
 
+const SITE_URL = "https://thegreennest.vercel.app";
+
+const contactJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact The Green Nest",
+    url: `${SITE_URL}/contact`,
+    mainEntity: {
+        "@type": "MedicalClinic",
+        name: "The Green Nest",
+        url: SITE_URL,
+        telephone: "+917888368297",
+        email: "thegreennest6@gmail.com",
+        address: {
+            "@type": "PostalAddress",
+            streetAddress: "SCO 49, Phase 6",
+            addressLocality: "Mohali",
+            addressRegion: "Punjab",
+            postalCode: "160055",
+            addressCountry: "IN",
+        },
+        geo: {
+            "@type": "GeoCoordinates",
+            latitude: 30.7046,
+            longitude: 76.7026,
+        },
+        openingHoursSpecification: [
+            {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                opens: "09:00",
+                closes: "18:00",
+            },
+        ],
+        contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+917888368297",
+            contactType: "Appointments",
+            availableLanguage: ["English", "Hindi"],
+        },
+    },
+};
+
 // Icons (Simple SVGs)
 const MapPin = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -66,6 +109,10 @@ export default function ContactPage() {
 
     return (
         <div className={styles.container}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(contactJsonLd) }}
+            />
             <div className={styles.header}>
                 <h1 className={styles.title}>Get in Touch</h1>
                 <p className={styles.subtitle}>
