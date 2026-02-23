@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./ServicesSection.module.css";
+import DecorativeShapes from "./DecorativeShapes";
 
 // SVG Icons based on the image provided
 const HeartIcon = () => (
@@ -70,6 +71,7 @@ export default function ServicesSection() {
 
     return (
         <section className={styles.servicesSection}>
+            <DecorativeShapes variant="A" />
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>Our Services</h2>

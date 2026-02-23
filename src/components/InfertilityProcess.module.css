@@ -1,29 +1,31 @@
 .section {
-    padding: 80px 20px;
-    background-color: transparent;
-    /* Or specific background if needed */
+    padding: 80px 24px;
+    background-color: var(--cream-light);
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .title {
-    font-family: var(--font-playfair);
-    font-size: 3rem;
-    color: #1a3c34;
-    margin-bottom: 20px;
+    font-family: var(--font-playfair), serif;
+    font-size: 2.4rem;
+    color: var(--dark-green);
+    margin-bottom: 16px;
     font-weight: 700;
 }
 
 .subtitle {
-    font-family: var(--font-inter);
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 60px;
-    max-width: 700px;
+    font-size: 1.02rem;
+    color: var(--body-text);
+    margin-bottom: 50px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
@@ -32,16 +34,15 @@
 .processGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 24px;
 }
 
 .card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    border: 1px solid #f0f0f0;
-    transition: transform 0.3s ease;
+    background: var(--card-bg);
+    padding: 36px 28px;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -49,38 +50,37 @@
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
 .number {
-    font-family: var(--font-playfair);
-    /* Using Playfair for that elegant large number look */
-    font-size: 4rem;
+    font-family: var(--font-playfair), serif;
+    font-size: 3.5rem;
     color: var(--primary-green);
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    opacity: 0.7;
 }
 
 .cardTitle {
-    font-family: var(--font-inter);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    color: #1a3c34;
-    margin-bottom: 15px;
+    color: var(--dark-green);
+    margin-bottom: 12px;
 }
 
 .cardDescription {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.5;
+    font-size: 0.88rem;
+    color: var(--body-text);
+    line-height: 1.55;
     text-align: center;
 }
 
 @media (max-width: 768px) {
     .processGrid {
         grid-template-columns: 1fr;
-        max-width: 400px;
+        max-width: 380px;
         margin: 0 auto;
     }
 }

@@ -1,7 +1,7 @@
 .container {
-    max-width: 800px;
+    max-width: 780px;
     margin: 0 auto;
-    padding: 120px 20px 80px 20px;
+    padding: 110px 24px 80px;
 }
 
 /* ─── Back Link ─── */
@@ -11,9 +11,9 @@
     gap: 6px;
     color: var(--primary-green);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     text-decoration: none;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -24,107 +24,105 @@
 
 /* ─── Article ─── */
 .article {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 48px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-    border: 1px solid #eef4ee;
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: 44px;
+    border: 1px solid var(--card-border);
 }
 
 /* ─── Article Header ─── */
 .articleHeader {
-    margin-bottom: 40px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid #f0f4f0;
+    margin-bottom: 36px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--card-border);
 }
 
 .meta {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 16px;
-    font-size: 0.85rem;
+    margin-bottom: 14px;
+    font-size: 0.82rem;
 }
 
 .category {
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-    color: var(--secondary-green);
-    padding: 4px 14px;
+    background: var(--card-accent);
+    color: var(--primary-green);
+    padding: 4px 12px;
     border-radius: 20px;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .dot {
-    color: #bbb;
+    color: var(--card-border);
 }
 
 .readTime {
-    color: #888;
+    color: var(--muted-text);
     font-weight: 500;
 }
 
 .title {
-    font-family: var(--font-playfair);
-    font-size: 2.8rem;
-    color: var(--dark-text);
+    font-family: var(--font-playfair), serif;
+    font-size: 2.5rem;
+    color: var(--dark-green);
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .authorRow {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
 }
 
 .author {
     font-weight: 600;
-    color: var(--dark-text);
+    color: var(--dark-green);
 }
 
 .date {
-    color: #999;
+    color: var(--muted-text);
 }
 
-/* ─── Article Content (markdown HTML) ─── */
+/* ─── Article Content ─── */
 .content {
-    font-family: var(--font-inter);
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     line-height: 1.8;
-    color: #444;
+    color: var(--body-text);
 }
 
 .content h2 {
-    font-family: var(--font-playfair);
-    font-size: 1.8rem;
-    color: var(--dark-text);
-    margin-top: 40px;
-    margin-bottom: 16px;
+    font-family: var(--font-playfair), serif;
+    font-size: 1.7rem;
+    color: var(--dark-green);
+    margin-top: 36px;
+    margin-bottom: 14px;
     font-weight: 700;
 }
 
 .content h3 {
-    font-family: var(--font-playfair);
-    font-size: 1.4rem;
-    color: var(--dark-text);
-    margin-top: 32px;
-    margin-bottom: 12px;
+    font-family: var(--font-playfair), serif;
+    font-size: 1.3rem;
+    color: var(--dark-green);
+    margin-top: 28px;
+    margin-bottom: 10px;
     font-weight: 700;
 }
 
 .content p {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .content ul,
 .content ol {
-    margin-bottom: 20px;
-    padding-left: 24px;
+    margin-bottom: 18px;
+    padding-left: 22px;
 }
 
 .content li {
@@ -132,7 +130,7 @@
 }
 
 .content strong {
-    color: var(--dark-text);
+    color: var(--dark-green);
     font-weight: 600;
 }
 
@@ -144,17 +142,17 @@
 }
 
 .content a:hover {
-    color: var(--secondary-green);
+    color: var(--dark-green);
 }
 
 .content blockquote {
     border-left: 4px solid var(--primary-green);
-    background: #f9fdf9;
-    margin: 28px 0;
-    padding: 20px 24px;
-    border-radius: 0 12px 12px 0;
+    background: var(--card-accent);
+    margin: 24px 0;
+    padding: 18px 22px;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
     font-style: italic;
-    color: #555;
+    color: var(--body-text);
 }
 
 .content blockquote p {
@@ -163,61 +161,60 @@
 
 .content img {
     max-width: 100%;
-    border-radius: 12px;
-    margin: 24px 0;
+    border-radius: var(--border-radius);
+    margin: 22px 0;
 }
 
 /* ─── Bottom CTA ─── */
 .cta {
     text-align: center;
-    margin-top: 60px;
-    padding: 48px 32px;
-    background: linear-gradient(135deg, #f0f9f0, #e8f5e9);
-    border-radius: 20px;
-    border: 1px solid #d4ecd4;
+    margin-top: 50px;
+    padding: 44px 28px;
+    background: var(--card-accent);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--card-border);
 }
 
 .ctaText {
-    font-family: var(--font-playfair);
-    font-size: 1.4rem;
-    color: var(--dark-text);
-    margin-bottom: 20px;
+    font-family: var(--font-playfair), serif;
+    font-size: 1.3rem;
+    color: var(--dark-green);
+    margin-bottom: 18px;
     font-weight: 600;
 }
 
 .ctaButton {
     display: inline-block;
-    padding: 14px 36px;
+    padding: 13px 32px;
     background-color: var(--primary-green);
-    color: white;
+    color: var(--white);
     font-weight: 600;
     border-radius: 50px;
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 12px rgba(136, 192, 87, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .ctaButton:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(136, 192, 87, 0.4);
+    transform: translateY(-2px);
+    background-color: var(--dark-green);
 }
 
 /* ─── Responsive ─── */
 @media (max-width: 600px) {
     .article {
-        padding: 28px 20px;
+        padding: 24px 18px;
     }
 
     .title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .content h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .content h3 {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
     .authorRow {

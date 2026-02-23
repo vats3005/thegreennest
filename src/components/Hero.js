@@ -14,7 +14,8 @@ export default function Hero() {
             <ScrollVideo src="/hero-video.mp4">
                 <div className={styles.heroContent}>
                     <h1 className={styles.title}>The Green Nest</h1>
-                    <p className={styles.subtitle}>Where Life Begins with Care & Compassion</p>
+                    <p className={styles.subtitle}>Premium Gynaecology & Infertility Clinic in Mohali</p>
+                    <p className={styles.tagline}>Where Life Begins with Care & Compassion</p>
                     <Link href="/contact" className={styles.ctaButton}>
                         Book an Appointment
                     </Link>

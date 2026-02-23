@@ -1,27 +1,27 @@
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 120px 20px 80px 20px;
+    padding: 110px 24px 80px;
 }
 
 /* ─── Page Header ─── */
 .header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .title {
-    font-family: var(--font-playfair);
-    font-size: 3.5rem;
-    color: var(--dark-text);
-    margin-bottom: 16px;
+    font-family: var(--font-playfair), serif;
+    font-size: 2.8rem;
+    color: var(--dark-green);
+    margin-bottom: 14px;
     font-weight: 700;
 }
 
 .subtitle {
-    font-size: 1.15rem;
-    color: #555;
-    max-width: 600px;
+    font-size: 1.05rem;
+    color: var(--body-text);
+    max-width: 550px;
     margin: 0 auto;
     line-height: 1.6;
 }
@@ -30,29 +30,27 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 24px;
 }
 
 /* ─── Blog Card ─── */
 .card {
-    background: #ffffff;
-    border: 1px solid #e8f0e8;
-    border-radius: 16px;
-    padding: 32px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
     text-decoration: none;
     color: inherit;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    gap: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-    border-color: var(--primary-green);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
 }
 
 .cardContent {
@@ -63,35 +61,35 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 14px;
-    font-size: 0.85rem;
+    margin-bottom: 12px;
+    font-size: 0.82rem;
 }
 
 .category {
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-    color: var(--secondary-green);
-    padding: 4px 14px;
+    background: var(--card-accent);
+    color: var(--primary-green);
+    padding: 4px 12px;
     border-radius: 20px;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .dot {
-    color: #bbb;
+    color: var(--card-border);
 }
 
 .readTime {
-    color: #888;
+    color: var(--muted-text);
     font-weight: 500;
 }
 
 .cardTitle {
-    font-family: var(--font-playfair);
-    font-size: 1.5rem;
-    color: var(--dark-text);
-    margin-bottom: 12px;
+    font-family: var(--font-playfair), serif;
+    font-size: 1.35rem;
+    color: var(--dark-green);
+    margin-bottom: 10px;
     font-weight: 700;
     line-height: 1.3;
     transition: color 0.3s ease;
@@ -102,10 +100,10 @@
 }
 
 .cardExcerpt {
-    font-size: 0.95rem;
-    color: #666;
+    font-size: 0.9rem;
+    color: var(--body-text);
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     line-clamp: 3;
@@ -117,29 +115,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.85rem;
-    color: #888;
-    border-top: 1px solid #f0f0f0;
-    padding-top: 14px;
+    font-size: 0.82rem;
+    color: var(--muted-text);
+    border-top: 1px solid var(--card-border);
+    padding-top: 12px;
 }
 
 .author {
     font-weight: 600;
-    color: var(--dark-text);
+    color: var(--dark-green);
 }
 
 .date {
-    color: #999;
+    color: var(--muted-text);
 }
 
 .cardArrow {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--primary-green);
     opacity: 0;
     transform: translateX(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     flex-shrink: 0;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .card:hover .cardArrow {
@@ -150,9 +148,9 @@
 /* ─── Empty State ─── */
 .emptyState {
     text-align: center;
-    padding: 80px 20px;
-    color: #888;
-    font-size: 1.1rem;
+    padding: 80px 24px;
+    color: var(--muted-text);
+    font-size: 1.05rem;
 }
 
 /* ─── Responsive ─── */
@@ -164,14 +162,14 @@
 
 @media (max-width: 600px) {
     .title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .card {
-        padding: 24px;
+        padding: 22px;
     }
 
     .cardTitle {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
     }
 }

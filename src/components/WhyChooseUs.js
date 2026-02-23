@@ -1,4 +1,5 @@
 import styles from "./WhyChooseUs.module.css";
+import DecorativeShapes from "./DecorativeShapes";
 
 export default function WhyChooseUs() {
     const reasons = [
@@ -22,6 +23,7 @@ export default function WhyChooseUs() {
 
     return (
         <section className={styles.section}>
+            <DecorativeShapes variant="B" />
             <div className={styles.container}>
                 <h2 className={styles.title}>Why Choose The Green Nest?</h2>
                 <div className={styles.grid}>

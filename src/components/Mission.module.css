@@ -1,73 +1,270 @@
 .missionSection {
-    padding: 80px 20px;
-    background-color: white;
-    text-align: center;
+    padding: 100px 24px;
+    background: #fdfaf6;
+    /* Very light cream/ivory */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Blobs */
+.blob {
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.6;
+}
+
+.blobTopLeft {
+    top: 50px;
+    left: 10%;
+    width: 250px;
+    height: 250px;
+    background: #dbe8d4;
+    /* Pastel sage */
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}
+
+.blobTopRight {
+    top: -50px;
+    right: -50px;
+    width: 500px;
+    height: 500px;
+    background: #eaf1e6;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    transform: rotate(30deg);
+}
+
+.blobBottomRight {
+    bottom: -50px;
+    right: 10%;
+    width: 300px;
+    height: 300px;
+    background: #e8ded4;
+    /* Pastel beige */
+    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+}
+
+.blobBottomLeft {
+    bottom: 0;
+    left: -50px;
+    width: 350px;
+    height: 350px;
+    background: #dcf0d6;
+    border-radius: 50% 50% 60% 40% / 40% 60% 50% 50%;
+}
+
+/* Leaf Textures */
+.leafTopLeft {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.leafBottomRight {
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.8;
 }
 
 .container {
-    max-width: var(--max-width);
+    max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Top Row: Text */
+.topRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.textContent {
+    max-width: 800px;
 }
 
 .title {
-    font-family: var(--font-playfair);
-    font-size: 3rem;
-    color: #1a3c34;
-    /* Dark Green */
-    margin-bottom: 30px;
+    font-family: var(--font-playfair), serif;
+    font-size: 3.5rem;
     font-weight: 700;
+    color: var(--dark-green);
+    margin-bottom: 20px;
+    line-height: 1.1;
 }
 
 .description {
     font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 80px auto;
+    line-height: 1.8;
+    color: #4a5c54;
 }
 
+/* Stats Grid Grid Layout */
 .statsGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* 2x2 Grid */
-    gap: 30px;
-    max-width: 800px;
-    margin: 0 auto;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr;
+    gap: 24px;
+    align-items: stretch;
 }
 
-.statItem {
+/* Stat Cards Base */
+.statCard {
+    position: relative;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background: #f9fdf9;
-    /* Very subtle green tint to differentiate from white bg */
-    border: 1px solid #e0f2f1;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 8px 30px rgba(44, 76, 59, 0.1);
+    /* Elegant soft shadow */
     transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.statItem:hover {
+.statCard:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    border-color: var(--primary-green);
 }
 
-.statNumber {
-    font-family: var(--font-inter);
+/* Background Colors for Cards */
+.bgLightGreen {
+    background: #dbe8d4;
+    /* Soft sage green */
+}
+
+.bgBeige {
+    background: #f1ebd8;
+    /* Soft warm beige */
+}
+
+/* Specific Card Layouts */
+.cardLarge {
+    padding: 60px 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.middleColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cardSmall {
+    flex: 1;
+    padding: 30px 20px;
+}
+
+.cardTall {
+    padding: 40px 30px;
+    height: 100%;
+}
+
+/* Typography inside cards */
+.statNumberLarge {
+    font-family: var(--font-playfair), serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    line-height: 1;
+    margin-bottom: 12px;
+    z-index: 1;
+}
+
+.statNumberMedium {
+    font-family: var(--font-playfair), serif;
     font-size: 3rem;
     font-weight: 700;
-    color: var(--primary-green);
+    color: var(--dark-green);
+    line-height: 1;
     margin-bottom: 10px;
+    z-index: 1;
 }
 
 .statLabel {
-    font-size: 1.1rem;
-    color: #555;
+    font-size: 1rem;
     font-weight: 500;
+    color: var(--dark-green);
+    z-index: 1;
 }
 
-@media (max-width: 600px) {
+/* Inner Leaf Decorations for cards */
+.cardLeaf1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.8;
+}
+
+.cardLeaf2 {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    opacity: 0.8;
+}
+
+.cardLeaf3 {
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .statsGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cardTall {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .topRow {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imageWrapper {
+        border-radius: 40px;
+        height: 250px;
+    }
+
     .statsGrid {
         grid-template-columns: 1fr;
+    }
+
+    .cardTall {
+        grid-column: span 1;
+    }
+
+    .middleColumn {
+        flex-direction: row;
+    }
+
+    .statNumberLarge {
+        font-size: 3rem;
+    }
+
+    .statNumberMedium {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .middleColumn {
+        flex-direction: column;
     }
 }

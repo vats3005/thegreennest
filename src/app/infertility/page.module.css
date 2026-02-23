@@ -1,122 +1,106 @@
 .pageWrapper {
-    padding-bottom: 80px;
+    padding-bottom: 0;
 }
 
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
 .introSection {
-    padding: 100px 0 80px 0;
+    padding: 110px 24px 70px;
     text-align: center;
-    /* Keeping it centered for text-only focus as per "no image" request */
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .mainTitle {
-    font-family: var(--font-playfair);
-    font-size: 4rem;
-    /* Larger, more premium */
-    color: #1a3c34;
-    margin-bottom: 30px;
+    font-family: var(--font-playfair), serif;
+    font-size: 3.2rem;
+    color: var(--dark-green);
+    margin-bottom: 24px;
     font-weight: 700;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
 }
 
 .introText {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     line-height: 1.8;
-    color: #444;
-    margin-bottom: 40px;
-    font-family: var(--font-inter);
+    color: var(--body-text);
+    margin-bottom: 30px;
 }
 
 .ctaButton {
     display: inline-block;
-    background-color: #88C057;
-    /* Primary Green */
-    color: white;
-    padding: 16px 40px;
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 14px 36px;
     border-radius: 50px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s;
-    box-shadow: 0 4px 15px rgba(136, 192, 87, 0.3);
+    text-decoration: none;
 }
 
 .ctaButton:hover {
-    background-color: #76a94b;
+    background-color: var(--dark-green);
     transform: translateY(-2px);
 }
 
-/* ... Keeping existing styles for Common Causes section if needed or used later ... */
-
+/* Common Causes Section */
 .commonCauses {
-    padding: 100px 0;
-    background-color: #F1F8E9;
-    /* Explicit pastel green from image/theme */
-    margin-top: 0;
-    /* Remove margin to connect smoothly if needed */
-    border-radius: 0;
-    /* Full width sections usually don't have border radius unless it's a specific card design. Image suggests full section bg. */
+    padding: 80px 0;
+    background-color: var(--cream-dark);
 }
 
 .sectionTitle {
-    font-family: var(--font-playfair);
-    font-size: 3rem;
-    color: #1a3c34;
+    font-family: var(--font-playfair), serif;
+    font-size: 2.4rem;
+    color: var(--dark-green);
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     font-weight: 700;
 }
 
 .causesGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    /* More gap */
-    max-width: 1000px;
+    gap: 28px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .causeCard {
-    background: white;
-    padding: 50px;
-    border-radius: 24px;
-    /* More rounded */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-    /* Softer, deeper shadow */
-    border: none;
-    /* Cleaner look without border */
-    transition: transform 0.3s ease;
+    background: var(--card-bg);
+    padding: 36px;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .causeCard:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
 .causeCard h3 {
-    color: #88C057;
-    /* Light green headline */
-    margin-bottom: 25px;
-    font-family: var(--font-inter);
-    font-size: 1.6rem;
+    color: var(--primary-green);
+    margin-bottom: 18px;
+    font-family: var(--font-playfair), serif;
+    font-size: 1.3rem;
     font-weight: 700;
 }
 
 .causeCard ul {
-    padding-left: 20px;
+    padding-left: 18px;
     list-style-type: disc;
 }
 
 .causeCard li {
-    margin-bottom: 15px;
-    color: #555;
-    font-family: var(--font-inter);
-    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--body-text);
+    font-size: 0.95rem;
     line-height: 1.6;
 }
 
@@ -126,6 +110,6 @@
     }
 
     .mainTitle {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
 }

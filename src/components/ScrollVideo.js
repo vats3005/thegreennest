@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
-import { useScroll, useTransform, useSpring } from "framer-motion";
+import { useScroll, useSpring } from "framer-motion";
 
 export default function ScrollVideo({ src, children }) {
     const containerRef = useRef(null);
@@ -89,12 +89,12 @@ export default function ScrollVideo({ src, children }) {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    background: 'rgba(0,0,0,0.3)', // Overlay for text readability
+                    background: 'rgba(26, 60, 52, 0.45)', // Overlay for text readability (kept dark green)
                     zIndex: 1
                 }} />
 
                 {/* Render children (Hero Content) on top of video */}
-                <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <div style={{ position: "absolute", zIndex: 2, top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     {children}
                 </div>
             </div>

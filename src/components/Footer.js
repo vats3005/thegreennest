@@ -6,29 +6,43 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className={styles.footerContent}>
                 <div className={styles.column}>
-                    <h3>The Green Nest</h3>
-                    <p>Centre for Women</p>
-                    <p>Headed by Dr. Shilpi Srivastava</p>
+                    <h3 className={styles.brandName}>THE GREEN NEST</h3>
+                    <p className={styles.tagline}>
+                        Compassionate care for every stage of your journey.
+                    </p>
                 </div>
 
                 <div className={styles.column}>
-                    <h3>Quick Links</h3>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="/meet-dr-shilpi">Meet Dr. Shilpi</Link></li>
-                        <li><Link href="/infertility">Infertility</Link></li>
                         <li><Link href="/services">Services</Link></li>
                         <li><Link href="/blogs">Blogs</Link></li>
-                        <li><Link href="/contact">Contact</Link></li>
                     </ul>
                 </div>
 
                 <div className={styles.column}>
-                    <h3>Contact Us</h3>
-                    <p>SCO 49, Phase 6, Mohali</p>
-                    <p>Punjab, India</p>
-                    <p>Phone: +91 7888368297</p>
-                    <p>Email: thegreennest6@gmail.com</p>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><Link href="/infertility">Infertility Treatments</Link></li>
+                        <li><Link href="/services">Wellness Checkups</Link></li>
+                        <li><Link href="/services">Counseling</Link></li>
+                    </ul>
+                </div>
+
+                <div className={styles.column}>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <a href="tel:+917888368297">+91 7888368297</a>
+                        </li>
+                        <li>
+                            <a href="mailto:thegreennest6@gmail.com">thegreennest6@gmail.com</a>
+                        </li>
+                        <li>SCO 49, Phase 6, Mohali</li>
+                        <li>Punjab, India</li>
+                    </ul>
                 </div>
             </div>
 

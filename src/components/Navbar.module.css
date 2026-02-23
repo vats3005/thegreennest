@@ -1,54 +1,83 @@
-.navContainer {
+.navWrapper {
     position: fixed;
-    top: 0;
+    top: 20px;
     left: 0;
     width: 100%;
-    height: var(--nav-height);
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
     z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    padding: 0 24px;
     transition: all 0.3s ease;
 }
 
-.navContent {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    height: 100%;
+.scrolled {
+    top: 10px;
+}
+
+/* 
+ * The pill shape matches the user's reference:
+ * Cream background, dark green offset shadow/border, rounded corners.
+ */
+.navContainer {
+    width: 100%;
+    max-width: 1300px;
+    height: 70px;
+    background: var(--cream-light);
+    border: 1.5px solid var(--dark-green);
+    border-radius: 50px;
+    box-shadow: 6px 6px 0px var(--dark-green);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 16px 0 32px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.scrolled .navContainer {
+    box-shadow: 4px 4px 0px var(--dark-green);
+    background: var(--cream);
+}
+
+.leftLinks,
+.rightLinks {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex: 1;
+}
+
+.leftLinks {
+    justify-content: flex-start;
+}
+
+.rightLinks {
+    justify-content: flex-end;
+    gap: 24px;
 }
 
 .logo {
     text-decoration: none;
-    font-family: var(--font-playfair);
-    /* font-size: 1.5rem; */
-    /* Removed as we are using image */
-    font-weight: 700;
-    color: var(--primary-green);
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    flex-shrink: 0;
+    margin: 0 16px;
 }
 
-.logoImage {
-    height: 60px;
-    /* Adjust based on logo aspect ratio */
-    width: auto;
-    object-fit: contain;
-}
-
-.navLinks {
-    display: flex;
-    gap: 30px;
+.logoText {
+    font-family: var(--font-playfair), serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .link {
     font-weight: 500;
+    font-size: 0.95rem;
     color: var(--dark-text);
-    position: relative;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
@@ -56,25 +85,31 @@
     color: var(--primary-green);
 }
 
-.link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--primary-green);
-    transition: width 0.3s ease;
-}
-
-.link:hover::after {
-    width: 100%;
-}
-
 .active {
     color: var(--primary-green);
+    font-weight: 600;
 }
 
+.ctaButton {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: transparent;
+    color: var(--dark-green);
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: 1.5px solid var(--dark-green);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    /* Adding subtle button inset if needed, matching outline design */
+}
+
+.ctaButton:hover {
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+
+/* Mobile button */
 .mobileMenuBtn {
     display: none;
     background: none;
@@ -85,28 +120,39 @@
 
 .mobileMenuBtn span {
     display: block;
-    width: 25px;
+    width: 24px;
     height: 2px;
-    background-color: var(--dark-text);
-    margin: 5px 0;
+    background-color: var(--dark-green);
+    margin: 6px 0;
     transition: 0.3s;
+    border-radius: 2px;
 }
 
-@media (max-width: 768px) {
-    .navLinks {
+@media (max-width: 1024px) {
+
+    .leftLinks,
+    .rightLinks {
         display: none;
+    }
+
+    .navContainer {
+        justify-content: space-between;
+        padding: 0 24px;
+        box-shadow: 4px 4px 0px var(--dark-green);
+    }
+
+    .logo {
+        margin: 0;
     }
 
     .mobileMenuBtn {
         display: block;
         z-index: 1002;
-        /* Above the menu overlay */
         position: relative;
     }
 
-    /* Hamburger Animation */
     .mobileMenuBtn.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(6px, 5px);
     }
 
     .mobileMenuBtn.open span:nth-child(2) {
@@ -114,26 +160,24 @@
     }
 
     .mobileMenuBtn.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 }
 
-/* Mobile Menu Overlay - Full Screen */
+/* Mobile Menu Overlay */
 .mobileMenu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
+    background-color: var(--cream);
     display: flex;
     justify-content: center;
     align-items: center;
     transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1001;
-    /* Below button, above content */
 }
 
 .menuOpen {
@@ -144,14 +188,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 24px;
 }
 
 .mobileLink {
-    font-family: var(--font-playfair);
-    font-size: 2rem;
+    font-family: var(--font-playfair), serif;
+    font-size: 1.8rem;
     font-weight: 600;
-    color: var(--dark-text);
+    color: var(--dark-green);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -159,4 +203,16 @@
 .mobileLink:hover,
 .activeMobile {
     color: var(--primary-green);
+}
+
+.mobileCtaBtn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: var(--dark-green);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    text-decoration: none;
 }

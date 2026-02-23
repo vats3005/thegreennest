@@ -1,4 +1,5 @@
 import styles from "./AllServices.module.css";
+import DecorativeShapes from "./DecorativeShapes";
 
 export default function AllServices() {
     const servicesData = [
@@ -56,6 +57,7 @@ export default function AllServices() {
 
     return (
         <section className={styles.section}>
+            <DecorativeShapes variant="C" />
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h1 className={styles.title}>Our Services</h1>

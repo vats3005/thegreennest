@@ -4,13 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 
-// Using a placeholder for logo if image not available, user can replace later
-const LogoPlaceholder = () => (
-    <span style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-        THE <span style={{ color: "var(--primary-green)" }}>Green</span> NEST
-    </span>
-);
-
 export default function Navbar() {
     const pathname = usePathname();
     const [scrolled, setScrolled] = useState(false);
@@ -24,12 +17,10 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Close menu when route changes
     useEffect(() => {
         setIsOpen(false);
     }, [pathname]);
 
-    // Prevent scrolling when menu is open
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
@@ -38,26 +29,27 @@ export default function Navbar() {
         }
     }, [isOpen]);
 
-    const navLinks = [
+    const leftLinks = [
         { name: "Home", href: "/" },
-        { name: "Meet Dr. Shilpi", href: "/meet-dr-shilpi" },
         { name: "Infertility", href: "/infertility" },
         { name: "Services", href: "/services" },
+    ];
+
+    const rightLinks = [
+        { name: "Meet Dr. Shilpi", href: "/meet-dr-shilpi" },
         { name: "Blogs", href: "/blogs" },
         { name: "Contact", href: "/contact" },
     ];
 
-    return (
-        <nav className={`${styles.navContainer} ${scrolled ? styles.scrolled : ""}`}>
-            <div className={styles.navContent}>
-                <Link href="/" className={styles.logo}>
-                    {/* If actual logo image is available, replace this */}
-                    <LogoPlaceholder />
-                </Link>
+    const allLinks = [...leftLinks, ...rightLinks];
 
-                {/* Desktop Links */}
-                <div className={styles.navLinks}>
-                    {navLinks.map((link) => (
+    return (
+        <nav className={`${styles.navWrapper} ${scrolled ? styles.scrolled : ""}`}>
+            <div className={styles.navContainer}>
+
+                {/* Desktop Left Links */}
+                <div className={styles.leftLinks}>
+                    {leftLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
@@ -66,6 +58,27 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
+                </div>
+
+                {/* Centered Logo */}
+                <Link href="/" className={styles.logo}>
+                    <span className={styles.logoText}>THE GREEN NEST</span>
+                </Link>
+
+                {/* Desktop Right Links & CTA */}
+                <div className={styles.rightLinks}>
+                    {rightLinks.map((link) => (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            className={`${styles.link} ${pathname === link.href ? styles.active : ""}`}
+                        >
+                            {link.name}
+                        </Link>
+                    ))}
+                    <Link href="/contact" className={styles.ctaButton}>
+                        Book Appointment
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -83,7 +96,7 @@ export default function Navbar() {
             {/* Mobile Menu Overlay */}
             <div className={`${styles.mobileMenu} ${isOpen ? styles.menuOpen : ''}`}>
                 <div className={styles.mobileLinks}>
-                    {navLinks.map((link) => (
+                    {allLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
@@ -93,6 +106,9 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
+                    <Link href="/contact" className={styles.mobileCtaBtn} onClick={() => setIsOpen(false)}>
+                        Book Appointment
+                    </Link>
                 </div>
             </div>
         </nav>

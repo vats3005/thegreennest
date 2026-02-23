@@ -1,4 +1,5 @@
 import styles from "./InfertilityProcess.module.css";
+import DecorativeShapes from "./DecorativeShapes";
 
 export default function InfertilityProcess() {
     const steps = [
@@ -21,6 +22,7 @@ export default function InfertilityProcess() {
 
     return (
         <section className={styles.section}>
+            <DecorativeShapes variant="E" />
             <div className={styles.container}>
                 <h2 className={styles.title}>Your Journey to Parenthood</h2>
                 <p className={styles.subtitle}>

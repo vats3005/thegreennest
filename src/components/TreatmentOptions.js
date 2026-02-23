@@ -1,4 +1,5 @@
 import styles from "./TreatmentOptions.module.css";
+import DecorativeShapes from "./DecorativeShapes";
 
 export default function TreatmentOptions() {
     const treatments = [
@@ -30,6 +31,7 @@ export default function TreatmentOptions() {
 
     return (
         <section className={styles.section}>
+            <DecorativeShapes variant="D" />
             <div className={styles.container}>
                 <h2 className={styles.title}>Our Treatment Options</h2>
                 <div className={styles.grid}>

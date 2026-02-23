@@ -1,103 +1,128 @@
 .servicesSection {
-    padding: 80px 20px;
-    background-color: #fafafa;
-    /* Light gray/white background per image */
-    text-align: center;
+    padding: 80px 24px;
+    background: var(--cream-light);
+    position: relative;
+    overflow: hidden;
 }
 
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .header {
-    margin-bottom: 60px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .title {
-    font-family: var(--font-playfair);
-    font-size: 3rem;
-    color: #1a3c34;
-    /* Dark Green */
-    margin-bottom: 15px;
+    font-family: var(--font-playfair), serif;
+    font-size: 2.4rem;
     font-weight: 700;
+    color: var(--dark-green);
+    margin-bottom: 12px;
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 40px;
+    color: var(--body-text);
+    font-size: 1.05rem;
 }
 
 .cardsGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-bottom: 60px;
+    gap: 24px;
+    margin-bottom: 40px;
 }
 
 .card {
-    background: white;
-    border-radius: 12px;
-    padding: 40px 30px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius-lg);
+    padding: 36px 28px;
     text-align: left;
-    border: 1px solid #eee;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card:nth-child(2) {
+    background: var(--card-accent);
+    border-color: rgba(107, 142, 107, 0.2);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
 }
 
 .iconWrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--light-sage);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
-    color: #2e7d32;
-    /* Green icon color */
-    /* Ensure SVG inherits or uses this color */
+    color: var(--primary-green);
+}
+
+.card:nth-child(2) .iconWrapper {
+    background: rgba(255, 255, 255, 0.6);
 }
 
 .cardTitle {
-    font-family: var(--font-inter);
+    font-family: var(--font-playfair), serif;
     font-size: 1.25rem;
-    font-weight: 700;
-    color: #1a3c34;
-    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--dark-green);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .cardDescription {
-    font-size: 0.95rem;
-    color: #666;
+    color: var(--body-text);
     line-height: 1.6;
+    font-size: 0.92rem;
 }
 
 .viewAllButton {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    background-color: #88C057;
-    /* Light Green */
-    color: white;
-    padding: 12px 30px;
-    border-radius: 50px;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 auto;
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 30px;
     font-weight: 600;
+    font-size: 0.95rem;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: fit-content;
 }
 
 .viewAllButton:hover {
-    background-color: #76a94b;
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
 }
 
 .arrowIcon {
-    margin-left: 8px;
+    display: flex;
+    align-items: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .cardsGrid {
         grid-template-columns: 1fr;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+        gap: 16px;
+    }
+
+    .title {
+        font-size: 1.8rem;
     }
 }
