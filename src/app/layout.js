@@ -1,5 +1,6 @@
 import { Inter, Playfair_Display } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -201,6 +202,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
         <WhatsAppButton />
+        <Analytics />
       </body>
     </html>
   );
