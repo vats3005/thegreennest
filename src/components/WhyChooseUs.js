@@ -12,8 +12,8 @@ export default function WhyChooseUs() {
             description: "Individual attention and customized treatment plans for each patient."
         },
         {
-            title: "Advanced Technology",
-            description: "State-of-the-art facilities and latest treatment methods."
+            title: "Advanced Treatments",
+            description: "Access to advanced IVF labs and the latest reproductive techniques, with your entire journey personally led by Dr. Shilpi."
         },
         {
             title: "Compassionate Environment",

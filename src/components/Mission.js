@@ -58,8 +58,8 @@ export default function Mission() {
                             <div className={styles.statLabel}>Years of Experience</div>
                         </div>
                         <div className={`${styles.statCard} ${styles.cardSmall} ${styles.bgLightGreen}`}>
-                            <div className={styles.statNumberMedium}>95%</div>
-                            <div className={styles.statLabel}>Success Rate</div>
+                            <div className={styles.statNumberMedium}>1:1</div>
+                            <div className={styles.statLabel}>Doctor-Led Care</div>
                         </div>
                     </div>
 

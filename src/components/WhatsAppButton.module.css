@@ -1,0 +1,41 @@
+.fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px;
+    background: #25d366;
+    color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(37, 211, 102, 0.4);
+    color: #ffffff;
+}
+
+.label {
+    line-height: 1;
+}
+
+/* On small screens, collapse to a circular icon-only button to save space */
+@media (max-width: 600px) {
+    .fab {
+        padding: 14px;
+        bottom: 18px;
+        right: 18px;
+    }
+
+    .label {
+        display: none;
+    }
+}

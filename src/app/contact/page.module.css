@@ -166,6 +166,29 @@
     cursor: not-allowed;
 }
 
+.whatsappBtn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: var(--font-inter), sans-serif;
+}
+
+.whatsappBtn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-1px);
+}
+
 .resultMessage {
     margin-top: 16px;
     text-align: center;
