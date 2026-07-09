@@ -38,7 +38,7 @@ As for discomfort, most women describe it as similar to menstrual cramping rathe
 
 I always remind my patients that a hysteroscopy is a tool for clarity, not a verdict. Many women come in feeling anxious about what might be found, and I understand that instinct completely. But in most cases, what we find is either entirely normal or something quite manageable. Even when we do identify a polyp, adhesion, or other finding, having that clarity is genuinely useful. It means we now know exactly what we are working with, rather than guessing.
 
-If you have been recommended a hysteroscopy as part of your fertility workup, try to see it as one more piece of the puzzle falling into place, one more way we are getting to know your body better so we can support you more precisely. Bring your questions to your appointment. Ask us to explain anything that feels unclear. That open conversation is, in my experience, the best preparation of all.
+If you have been recommended a hysteroscopy as part of your fertility workup, try to see it as one more piece of the puzzle falling into place, one more way we are getting to know your body better so we can support you more precisely. Bring your questions to your appointment. Ask us to explain anything that feels unclear. That open conversation is, in my experience, one of the most valuable ways to prepare.
 
 ## What to Ask Your Doctor Before the Procedure
 
